@@ -4,4 +4,4 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 ./vscode
-/allure-results/allure-results/
+/allure-results/
