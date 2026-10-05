@@ -82,5 +82,4 @@ async assertErrorMessageIsShown(expectedError) {
     const errorMessage = this.page.getByText(expectedError);
     await expect(errorMessage).toBeVisible();
   });
-}
-}
+}}

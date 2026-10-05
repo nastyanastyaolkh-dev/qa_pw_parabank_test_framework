@@ -22,8 +22,8 @@ test('Successful funds transfer', async ({
   await transferFundsPage.selectToAccount({ index: 1 });
   await transferFundsPage.clickTransferButton();
   await transferFundsPage.assertTransferSuccessMessageIsShown();
-  const fromAccountNumber = await transferFundsPage.fromAccountDropdown.locator('option').nth(0).textContent();
-  const toAccountNumber = await transferFundsPage.toAccountDropdown.locator('option').nth(1).textContent();
+  const fromAccountNumber = await transferFundsPage.getFromAccountNumber();
+  const toAccountNumber = await transferFundsPage.getToAccountNumber();
   await transferFundsPage.assertCorrectTransfer('$50.00', fromAccountNumber, toAccountNumber);
   
 });

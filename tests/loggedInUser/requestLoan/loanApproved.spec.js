@@ -21,5 +21,3 @@ test('Loan approved', async ({
     newAccountNumber, `$${loanData.loanAmount}`
   );
 })
-
-  

@@ -54,8 +54,10 @@ export class RegistrationPage {
 
   async assertWelcomeMessageIsDisplayed(username) {
     await this.step(`Assert welcome message for ${username}`, async () => {
-      // eslint-disable-next-line max-len
-      await expect(this.welcomeMessage(username)).toHaveText(`Welcome ${username}`);
+       
+      await expect(
+        this.welcomeMessage(username)
+      ).toHaveText(`Welcome ${username}`);
     });
   }
 

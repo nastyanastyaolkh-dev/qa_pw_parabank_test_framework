@@ -78,5 +78,4 @@ export class AccountsDetailsPage {
     return await this.page.locator('#transactionTable tbody tr').first().locator('td').first().textContent();
   });
 }
-
 }

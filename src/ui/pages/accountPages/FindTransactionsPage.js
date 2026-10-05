@@ -139,6 +139,4 @@ async assertTransactionAmountErrorIsShown(expectedError) {
   await this.step(`Assert transaction amount error is shown: ${expectedError}`, async () => {
     await expect(this.invalidAmountError).toHaveText(expectedError);
   }); 
-}
-
-}
+}}

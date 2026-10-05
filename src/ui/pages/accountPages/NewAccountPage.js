@@ -50,6 +50,4 @@ export class NewAccountPage {
        return await this.page.locator('#newAccountId').textContent();
      });
    }
-
-
 }

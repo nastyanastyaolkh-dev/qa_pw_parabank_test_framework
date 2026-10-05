@@ -26,8 +26,13 @@ export const test = genericTest.extend({
     await registrationPage.open();
     await registrationPage.fillForm(userData);
     await registrationPage.clickRegisterButton();
-    // registration auto-logs in, so we might need to log out here if the test wants to start logged-out
 
     await use(userData);
+  },
+
+  loggedOutUser: async ({ existingUser, page }, use) => {
+    const homePage = new HomePage(page);
+    await homePage.clickLogOutLink();
+    await use(existingUser);
   },
 });

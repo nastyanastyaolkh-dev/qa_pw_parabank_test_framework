@@ -58,4 +58,17 @@ export class TransferFundsPage {
     await expect(this.fromAccountIdResult).toHaveText(expectedFromAccount);
     await expect(this.toAccountIdResult).toHaveText(expectedToAccount);
   });
-}}
+}
+
+async getFromAccountNumber() {
+  return await this.step('Get from account number', async () => {
+    return await this.fromAccountDropdown.locator('option').nth(0).textContent();
+  });
+}
+
+async getToAccountNumber() {
+  return await this.step('Get to account number', async () => {
+    return await this.toAccountDropdown.locator('option').nth(1).textContent();
+  });
+}
+}

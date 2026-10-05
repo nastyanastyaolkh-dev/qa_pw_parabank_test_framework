@@ -57,7 +57,4 @@ export class CustomerLookupPage {
       await expect(this.lookupResultText).toContainText(`Password: ${password}`);
     });
   }
-
-
-
 }
